@@ -10,8 +10,8 @@ Also install some dependencies
 
 Add Feature : 
 
-Products Section
-Product Page
+Products Section,
+Product Page,
 Cart Page
 
 Project ShowCase :
