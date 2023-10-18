@@ -1,0 +1,29 @@
+.product-detail{
+    
+    width: 100%;
+   
+}
+.product-detail div{
+    
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+}
+.product-detail div .box{
+    width: 40%;
+}
+.product-detail div img{
+    width: 30%;
+}
+.product-detail h2{
+    margin-top: 20px;
+    font-size: 25px;
+}
+.product-detail p{
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 30px;
+}
