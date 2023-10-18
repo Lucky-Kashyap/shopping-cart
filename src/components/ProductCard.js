@@ -1,8 +1,17 @@
 import { Link} from "react-router-dom";
 import "./ProductCard.css";
 
-export const ProductCard = ({ product }) => {
+export const ProductCard = ({ product,shopCount,setShopCount,setProduct }) => {
   const { name, price, image,id } = product;
+
+  const passData=()=>{
+    setShopCount(shopCount+1);
+
+    // console.log(product);
+// setProduct(product);
+
+    // return product;
+  }
 
   return (
     <div className="productCard">
@@ -12,7 +21,7 @@ export const ProductCard = ({ product }) => {
       <p className="name">{name}</p>
       <div className="action">
         <p>${price}</p>
-        <button>Add To Cart</button>
+        <button onClick={passData}>Add To Cart</button>
       </div>
     </div>
   );

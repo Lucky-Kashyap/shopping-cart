@@ -1,15 +1,15 @@
 import { ProductCard } from "../components";
 import { useFetch } from "../hooks/useFetch";
 
-export const Home = () => {
+export const Home = ({shopCount,setShopCount,product,setProduct}) => {
     const URL = 'https://fakestoreapi.com/products';
-  const {data : product} = useFetch(URL);
+  const {data : products} = useFetch(URL);
 
   return (
     <main>
       <section className="products">
-        { product.map((product) => (
-          <ProductCard key={product.id} product={product} />
+        { products.map((product) => (
+          <ProductCard shopCount={shopCount} setShopCount={setShopCount} key={product.id} setProduct={setProduct} product={product} />
         )) }        
       </section>
     </main>

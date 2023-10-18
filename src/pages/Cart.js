@@ -2,7 +2,7 @@ import { useTitle } from "../hooks/useTitle";
 import { CartCard } from "../components";
 import { useFetch } from "../hooks/useFetch";
 
-export const Cart = () => {
+export const Cart = ({product,setProduct}) => {
   useTitle("Cart");
   const URL = 'https://fakestoreapi.com/products';
   
@@ -11,9 +11,9 @@ export const Cart = () => {
   return (
     <main>
       <section className="cart">
-        <h1>Cart Items: {products.length}</h1>
+        <h1>Cart Items: {product.length}</h1>
         { products.map((product) => (
-          <CartCard key={product.id} product={product} />
+          <CartCard product={product} setProduct={setProduct} key={product.id}  />
         )) }        
       </section>
     </main>
