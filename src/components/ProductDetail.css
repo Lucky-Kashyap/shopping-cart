@@ -27,3 +27,35 @@
     font-size: 18px;
     line-height: 30px;
 }
+
+@media only screen and  (max-width:550px){
+    .product-detail div img{
+        width: 60%;
+        margin-left: 80px;
+    }
+    .product-detail div .box{
+        width: 80%;
+    }
+    .product-detail div h2{
+        font-size: 20px;
+    }
+}
+
+@media only screen and  (max-width:380px){
+    .product-detail div img{
+        width: 70%;
+        margin-left: 50px;
+    }
+    .product-detail div .box{
+        width: 100%;
+    }
+    .product-detail div h2{
+        font-size: 20px;
+    }
+}
+
+@media only screen and  (max-width:650px){
+    .product-detail div img{
+        width: 40%;
+    }
+}

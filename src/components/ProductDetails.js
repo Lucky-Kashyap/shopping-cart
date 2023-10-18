@@ -22,7 +22,7 @@ export const ProductDetails = () => {
 
     <div>
        
-        <img src={products.image} alt="product-image" />
+        <img src={products.image} alt="product" />
         <div className="box">
         <h2>{products.title}</h2>
         <p>{products.description}</p>
