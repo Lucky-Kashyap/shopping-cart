@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
 
-export const Header = ({shopCount,setShopCount}) => {
+export const Header = () => {
     return (
       <header>
         <Link to="/" className="logo">
@@ -15,7 +15,7 @@ export const Header = ({shopCount,setShopCount}) => {
           <NavLink to="/cart" className="link">Cart</NavLink>
         </nav>
         <Link to="/cart" className="items">
-          <span>Cart: {shopCount}</span>
+          <span>Cart:</span>
         </Link>
       </header>
     )

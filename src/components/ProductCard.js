@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
-export const ProductCard = ({
-  product,
-  shopCount,
-  setShopCount,
-  setProduct,
-}) => {
+export const ProductCard = ({ product }) => {
   const { name, price, image, id } = product;
 
   // const passData=()=>{
