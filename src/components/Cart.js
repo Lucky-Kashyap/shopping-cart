@@ -8,7 +8,7 @@ export const CartCard = ({product}) => {
   const handleRemove=()=>{
     
     removeFromCart(product);
-    console.log(product);
+    // console.log(product);
   }
 
   return (
