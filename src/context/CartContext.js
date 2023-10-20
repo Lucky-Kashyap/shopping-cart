@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import { cartReducer } from "../reducer/cartReducer";
 
 const initialState = {
@@ -11,6 +11,19 @@ const CartContext = createContext(initialState);
 
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
+
+  // Load products from localStorage when the component mounts
+  useEffect(() => {
+    const savedProducts = JSON.parse(localStorage.getItem("cardList"));
+    if (savedProducts) {
+      dispatch({ type: "LOAD_PRODUCTS", payload: savedProducts });
+    }
+  }, []);
+
+  // Save products to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem("products", JSON.stringify(state.cartList));
+  }, [state.cartList]);
 
   const addToCart = (product) => {
     const updatedCartList = state.cartList.concat(product);
