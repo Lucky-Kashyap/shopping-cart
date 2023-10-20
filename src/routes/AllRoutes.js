@@ -4,20 +4,19 @@ import { ProductDetails } from "../components";
 import { Cart } from "../pages";
 import { Home } from "../pages";
 import { PageNotFound } from "../pages";
-import { useState } from "react";
 
-const AllRoutes = ({shopCount,setShopCount}) => {
-  const [product,setProduct]=useState([]);
- 
-
+const AllRoutes = () => {
   return (
     <>
       {/* <Header /> */}
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
-        <Route path="/product/:id" element={<ProductDetails  />}></Route>
-        <Route path="*" element={<PageNotFound title="page not found"/>}></Route>
+        <Route path="/product/:id" element={<ProductDetails />}></Route>
+        <Route
+          path="*"
+          element={<PageNotFound title="page not found" />}
+        ></Route>
       </Routes>
     </>
   );

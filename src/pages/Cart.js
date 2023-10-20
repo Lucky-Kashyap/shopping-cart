@@ -1,13 +1,13 @@
 import { useTitle } from "../hooks/useTitle";
 import { CartCard } from "../components";
-import { useFetch } from "../hooks/useFetch";
-import { CartContext, useCart } from "../context/CartContext";
-import { useContext } from "react";
-import img1 from '../assets/1001.png'
-import img2 from '../assets/1002.png';
+// import { useFetch } from "../hooks/useFetch";
+import { useCart } from "../context/CartContext";
+// import { useContext } from "react";
+// import img1 from '../assets/1001.png'
+// import img2 from '../assets/1002.png';
 
 export const Cart = () => {
-  const { total,cartList } = useCart();
+  const { total, cartList } = useCart();
   // const {total} = useContext(CartContext);
 
   useTitle("Cart");
